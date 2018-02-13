@@ -1,0 +1,26 @@
+using System;
+
+namespace Diamond
+{
+    internal class Program
+    {
+        private static void Main()
+        {
+            int size;
+            do
+            {
+                Console.WriteLine("please Enter the Size for the Diamond, which should be Odd number!!!");
+                size = Convert.ToInt32(Console.ReadLine());
+            } while (size % 2 == 0);
+
+            for (var i = 0; i < size * size; ++i)
+            {
+                Console.Write(Math.Abs(i % size - size / 2) + Math.Abs(i / size - size / 2) <= size / 2 ? "*" : " ");
+                Console.Write((i + 1) % size == 0 ? "\n" : "");
+            }
+            Console.ReadLine();
+        }
+    }
+}
+
+http://www.csharpstar.com/diamond-pattern-program-in-csharp/
